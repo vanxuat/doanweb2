@@ -1,0 +1,42 @@
+header .menu{
+    list-style-type: none;
+    text-align: center;
+  margin: 0;
+  
+}
+header .menu li{
+    display:inline-table;
+    position: relative;
+    width: 120px;
+    height:40px ;
+    line-height: 40px;
+    margin: 0 20px 0 0;
+}
+
+
+header .menu li a{
+    text-decoration:none; 
+}
+
+header .menu li:hover{
+    background: aquamarine;
+
+}
+
+
+.menu  li .submenu{
+    display: none;
+    padding-left: 0;
+    position: absolute;
+}
+
+.menu  li:hover .submenu{
+    display: block;
+}
+
+#dangnhap,#dangki{
+    float: right;
+}
+
+
+

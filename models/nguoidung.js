@@ -22,6 +22,9 @@ const taikhoan=db.define("taikhoan",{
     vaitroid:{
         type:Sequelize.INTEGER
     },
+    hinhanh:{
+        type:Sequelize.STRING(300)
+    },
     googleid:{
         type:Sequelize.STRING
     },
