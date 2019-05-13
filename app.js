@@ -4,10 +4,13 @@ const app=express();
 const expressLayouts=require("express-ejs-layouts")
 const bodyParser=require("body-parser")
 const Passport=require("passport")
-const LocalStrategy=require("passport-local").Strategy;
 const session =require("express-session");
 
 
+
+//chung thuc bang local va google
+const google=require("./midelwere/google")
+const local=require("./midelwere/local")
 
 //them vao co so du lieu cac model
 const cumrap=require("./models/cumrap");
@@ -44,7 +47,6 @@ app.set('layout', 'index');
 
 
 app.use((req,res,next)=>{
-  console.log("----------------------------------------------------------------");
    const {user}=req;
    res.locals.email=null
    if(!user){
@@ -70,31 +72,17 @@ app.use('/dangnhap',require("./routes/dangnhap"))
 
 
 
-Passport.use(new LocalStrategy({
-  usernameField: 'Email',
-  passwordField: 'matkhau'
-},
-  (Email, matkhau, done) => {
-   
-    nguoidung.findOne({where:{email:Email},row:true}).then(users => {
-        if(users.matkhau ===matkhau){
-          return done(null,users)
-        }
-        else{
-          return done(false,null);
-        }
-    }).catch(err=>{console.log(err)});
+Passport.use(local);
+Passport.use(google);
 
-  
-    
-  }
-));
+
 
 
 
 
 Passport.serializeUser((user, done) => {
  
+
   done(null, user.email)
 
 });

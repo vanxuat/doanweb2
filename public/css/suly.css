@@ -42,4 +42,6 @@ input{
     display: block;
 }
 
-
+#google,#facebook{
+    display: block
+}

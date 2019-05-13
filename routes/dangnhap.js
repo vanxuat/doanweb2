@@ -15,6 +15,26 @@ Route.post("/",PassPort.authenticate('local'),(req,res)=>{
 
 
 
+
+Route.get(
+    '/auth/google',
+    PassPort.authenticate('google', {
+      scope: ['profile', 'email']
+    }),(req,res)=>{
+      res.send("dang nhap thanh cong");
+    }
+);
+
+Route.get('/auth/google/callback', PassPort.authenticate('google', { 
+    successRedirect: '/',
+    failureRedirect: '/dangki'
+}));
+
+
+
+
+
+
 module.exports=Route;
 
 

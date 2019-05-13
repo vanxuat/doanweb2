@@ -16,8 +16,8 @@
                 </li>
                 <li><a href="#">THÀNH VIÊN</a></li>
                 <%if(!locals.email){%>
-                <li id="dangnhap"><a href="#">ĐĂNG NHẬP</a></li>
-                <li id="dangki"><a href="#">ĐĂNG KÍ</a></li>
+                <li id="dangnhap"><a href="/dangnhap">ĐĂNG NHẬP</a></li>
+                <li id="dangki"><a href="/dangki">ĐĂNG KÍ</a></li>
                 <%}else{%>
                         <li id="nguoidung"><a href="#"><%=locals.email%></a></li>
                 <%}%>
