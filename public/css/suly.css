@@ -34,9 +34,12 @@ header .menu li:hover{
     display: block;
 }
 
-#dangnhap,#dangki{
+#dangnhap,#dangki,#nguoidung{
     float: right;
 }
 
+input{
+    display: block;
+}
 
 
