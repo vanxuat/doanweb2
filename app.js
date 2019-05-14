@@ -23,7 +23,7 @@ const rap=require("./models/rap")
 const suatchieu=require("./models/suatchieu")
 const vaitro =require("./models/vaitro")
 const vephim =require("./models/vephim")
-
+const thanhpho=require("./models/thanhpho")
 
 
 app.use(express.static("public"))
@@ -56,8 +56,6 @@ app.use((req,res,next)=>{
       res.locals.email=user.email;
       next();
    }
-  
- 
 })
 
 
@@ -65,7 +63,7 @@ app.use((req,res,next)=>{
 app.use("/",require("./routes/index"))
 app.use("/dangki",require("./routes/dangki"))
 app.use('/dangnhap',require("./routes/dangnhap"))
-
+app.use("/quanlyrap",require("./routes/quanlyrap"))
 
 
 

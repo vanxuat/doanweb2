@@ -12,6 +12,9 @@ const cumrap=db.define("cumrap",{
     },
     diachi:{
         type:Sequelize.STRING(400)
+    },
+    thanhphoid:{
+        type:Sequelize.STRING
     }
 },{
     timestamps:false

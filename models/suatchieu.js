@@ -13,11 +13,11 @@ const suatchieu=db.define("suatchieu",{
     idrap:{
         type:Sequelize.STRING
     },
-    ngaychieu:{
+    thoidiembatdau:{
         type:Sequelize.DATE
     },
-    thoigianchieu:{
-        type:Sequelize.TIME
+    thoidiemketthuc:{
+        type:Sequelize.DATE
     },
     giave:{
         type:Sequelize.FLOAT

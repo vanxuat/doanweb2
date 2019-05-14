@@ -19,7 +19,7 @@ const phim=db.define("phim",{
         type:Sequelize.STRING
     },
     daodien:{
-        type:Sequelize.STRING(300)
+        type:Sequelize.STRING
     },
     dienvien:{
         type:Sequelize.STRING
@@ -29,7 +29,7 @@ const phim=db.define("phim",{
 })
 
 
-
+module.exports=phim
 
 
 

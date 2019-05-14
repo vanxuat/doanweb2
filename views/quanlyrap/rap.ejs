@@ -1,0 +1,25 @@
+<h3>Nhap thong tin cho rap</h3>
+<form method="POST" action="/quanlyrap/rap">
+    <label for="tenrap">Tên Rạp</label>
+    <input type="text" id="tenrap" name="tenrap"/>
+    <label for="cumrap">Chọn Cụm Rạp</label>
+    <select id="cumrap" name="cumrap" >
+        <%data.cur.forEach((cum)=>{%>
+            <option value="<%=cum.id%>"><%= cum.tencum%></option>
+
+        <%})%>
+    </select>
+    <label for="loairap">Loai Rap</label>
+    <select id="loairap" name="loairap">
+        <%data.loair.forEach((loir)=>{%>
+            <option value="<%=loir.id%>"><%=loir.tenloairap%></option>
+
+        <%})%>
+    </select>
+
+    <label for="kthuocngang">Kích Thước Ngang</label>
+    <input type="text" id="kthuocngang" name="kthuocngang"/>
+    <label for="kthuocdoc">Kích Thước Dọc</label>
+    <input type="text" id="kthuocdoc" name="kthuocdoc"/>
+    <button type="submit">LUU</button>
+</form>

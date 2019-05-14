@@ -1,0 +1,17 @@
+<h3>Nhập Thông Tin Cụm Rạp</h3>
+
+<form method="POST" action="/quanlyrap/cumrap">
+    <label>Tên Cụm</label>
+    <input type="text" id="tencum" name="tencum" />
+    <label>Nhập Địa Chỉ</label>
+    <input type="text" id="diachi" name="diachi" />
+    <select id="thanhpho" name="thanhpho">
+        <%data.forEach((da)=>{%>
+            <option value="<%=da.id%>"><%=da.tenthanhpho%></option>
+        <%})%>
+       
+    </select>
+
+
+    <button type="submit">LƯU</button>
+</form>
