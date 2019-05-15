@@ -6,6 +6,9 @@ const city = require("./../models/thanhpho");
 const loairaps = require("./../models/loairap");
 const Phims=require("./../models/phim")
 const raps=require("./../models/rap")
+const Suatchieu=require("./../models/suatchieu")
+
+
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
@@ -130,6 +133,27 @@ Route.post('/rap',async (req,res)=>{
     let tc=await raps.create({id:uuid(),tenrap:tenrap,idcum:cumrap,loairapid:loairap,kichthuocngang:kthuocngang,kichthuocdoc:kthuocdoc});
   
     res.redirect("/");
+
+})
+
+
+Route.get("/suatchieu",async (req,res)=>{
+  let lisrap=await raps.findAll({raw:true});
+  let listphim=await Phims.findAll({raw:true});
+  res.render("quanlyrap/suatchieu",{data:{lisrap,listphim}})
+
+})
+
+
+Route.post("/suatchieu",async (req,res)=>{
+  const{phim,rapphim,tgbatdau,tgkettuc,giave}=req.body;
+
+    let data=await Suatchieu.create({idxuatchieu:uuid(),idphim:phim,idrap:rapphim,thoidiembatdau:tgbatdau,thoidiemketthuc:tgkettuc,giave:parseFloat(giave)});
+  
+    if(data){
+      res.redirect("/");
+    }
+    
 
 })
 

@@ -13,6 +13,13 @@ Route.post("/",PassPort.authenticate('local'),(req,res)=>{
    res.redirect("/");
 })
 
+Route.get("/Logout",(req,res)=>{
+  req.logOut();
+  res.redirect("/");
+
+
+});
+
 
 
 

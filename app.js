@@ -64,7 +64,7 @@ app.use("/",require("./routes/index"))
 app.use("/dangki",require("./routes/dangki"))
 app.use('/dangnhap',require("./routes/dangnhap"))
 app.use("/quanlyrap",require("./routes/quanlyrap"))
-
+app.use("/quanlyve",require("./routes/quanlyve"))
 
 
 

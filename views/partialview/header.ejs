@@ -19,7 +19,13 @@
                 <li id="dangnhap"><a href="/dangnhap">ĐĂNG NHẬP</a></li>
                 <li id="dangki"><a href="/dangki">ĐĂNG KÍ</a></li>
                 <%}else{%>
-                        <li id="nguoidung"><a href="#"><%=locals.email%></a></li>
+                        <li id="nguoidung">
+                                <a href="#"><%=locals.email%></a>
+                                <ul class="submenu">
+                                        <li><a>Quản lý tài khoản</a></li>
+                                        <li><a href="/dangnhap/Logout">Logout</a></li>
+                                </ul>
+                        </li>
                 <%}%>
         </ul>
 </header>

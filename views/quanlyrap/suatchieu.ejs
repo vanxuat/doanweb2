@@ -1,0 +1,25 @@
+<h1>Nhập Thông Tin Suất Chiếu</h1>
+
+<form method="POST" action="/quanlyrap/suatchieu">
+        <label for="phim">Chọn Phim</label>
+        <select id="phim" name="phim">
+            <%data.listphim.forEach((phim)=>{%>
+                <option value="<%=phim.id%>"><%=phim.tenphim%></option>
+
+            <%})%>
+        </select>
+        <label>Chon Rap</label>
+        <select id="rapphim" name="rapphim">
+            <%data.lisrap.forEach((rap)=>{%>
+                <option value="<%=rap.id%>"><%=rap.tenrap%></option>
+            <%})%>
+        </select>
+        <label for="tgbatdau">Thoi Diem bat Dau</label>
+        <input type="datetime-local" id="tgbatdau" name="tgbatdau"/>
+        <label>Thoi Diem Ket thuc</label>
+        <input type="datetime-local" id="tgkettuc" name="tgkettuc"/>
+        <label for="giave">Gia ve</label>
+        <input type="text" id="giave" name="giave"/>
+
+        <button type="submit">LUU</button>
+</form>

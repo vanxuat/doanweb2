@@ -1,9 +1,13 @@
 header .menu{
     list-style-type: none;
     text-align: center;
-  margin: 0;
-  
+    margin: 0;
+    background-color: #9caca1;
+    
 }
+
+
+
 header .menu li{
     display:inline-table;
     position: relative;
@@ -50,3 +54,14 @@ input{
 #cumrap,#loairap{
     display: block;
 }
+
+#phim,#rapphim{
+    display: block;
+}
+
+
+
+
+/* Phan su ly sideShow */
+
+
