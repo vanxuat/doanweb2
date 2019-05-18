@@ -3,6 +3,8 @@ const db=require("./config/db");
 const app=express();
 const expressLayouts=require("express-ejs-layouts")
 const bodyParser=require("body-parser")
+
+//Su duung passport de chung thuc
 const Passport=require("passport")
 const session =require("express-session");
 
@@ -69,7 +71,7 @@ app.use("/quanlyve",require("./routes/quanlyve"))
 
 
 
-
+//Midelwere cua login local va google
 Passport.use(local);
 Passport.use(google);
 

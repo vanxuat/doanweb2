@@ -30,6 +30,10 @@ const taikhoan=db.define("taikhoan",{
     },
     facebookid:{
         type:Sequelize.STRING
+    },
+    kichhoat:{
+        type:Sequelize.BOOLEAN,
+        defaultValue:false
     }
 
 
