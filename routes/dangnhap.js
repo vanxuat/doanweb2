@@ -9,9 +9,8 @@ Route.get('/',(req,res)=>{
     res.render("quanlyuser/dangnhap")
 })
 
-Route.post("/",PassPort.authenticate('local'),(req,res)=>{
-   res.redirect("/");
-})
+Route.post("/",PassPort.authenticate('local',{ successRedirect: '/',
+failureRedirect: '/dangnhap' }))
 
 Route.get("/Logout",(req,res)=>{
   req.logOut();
